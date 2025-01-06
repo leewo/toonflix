@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widgets/button.dart';
+import 'package:toonflix/widgets/card.dart';
 
 // class Player {
 //   String name;
@@ -95,6 +96,70 @@ class MyApp extends StatelessWidget {
                     bgColor: Color(0xFF1F2123),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withAlpha(150),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MyCard(
+                title: 'Euro',
+                number: '6 428',
+                currency: 'EUR',
+                bgColor: Colors.white,
+                fgColor: Color(0xFF202123),
+                icon: Icon(
+                  Icons.euro,
+                  color: Color(0xFF202123),
+                  size: 80,
+                ),
+              ),
+              MyCard(
+                title: 'Dollar',
+                number: '4 428',
+                currency: 'USD',
+                bgColor: Color(0xFF202123),
+                fgColor: Colors.white,
+                icon: Icon(
+                  Icons.attach_money_outlined,
+                  color: Colors.white,
+                  size: 80,
+                ),
+              ),
+              MyCard(
+                title: 'Won',
+                number: '9 122 001',
+                currency: 'KRW',
+                bgColor: Colors.white,
+                fgColor: Color(0xFF202123),
+                // icon: Icon('~/assets/south-korean-won-krw-icon.svg'),
+                icon: Icon(
+                  Icons.attach_money_outlined,
+                  color: Color(0xFF202123),
+                  size: 80,
+                ),
               ),
             ],
           ),
