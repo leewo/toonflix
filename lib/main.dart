@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widgets/button.dart';
 import 'package:toonflix/widgets/card.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 // class Player {
 //   String name;
@@ -125,15 +126,15 @@ class MyApp extends StatelessWidget {
                 height: 20,
               ),
               MyCard(
-                title: 'Euro',
-                number: '6 428',
-                currency: 'EUR',
+                title: 'Won',
+                number: '9 122 001',
+                currency: 'KRW',
                 bgColor: Colors.white,
                 fgColor: Color(0xFF202123),
-                icon: Icon(
-                  Icons.euro,
-                  color: Color(0xFF202123),
-                  size: 80,
+                icon: SvgPicture.asset(
+                  'assets/south-korean-won-krw-icon.svg',
+                  width: 40,
+                  height: 40,
                 ),
               ),
               MyCard(
@@ -149,14 +150,13 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               MyCard(
-                title: 'Won',
-                number: '9 122 001',
-                currency: 'KRW',
+                title: 'Euro',
+                number: '6 428',
+                currency: 'EUR',
                 bgColor: Colors.white,
                 fgColor: Color(0xFF202123),
-                // icon: Icon('~/assets/south-korean-won-krw-icon.svg'),
                 icon: Icon(
-                  Icons.attach_money_outlined,
+                  Icons.euro,
                   color: Color(0xFF202123),
                   size: 80,
                 ),

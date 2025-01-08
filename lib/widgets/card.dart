@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyCard extends StatelessWidget {
   final String title, number, currency;
   final Color bgColor, fgColor;
-  final Icon icon;
+  final Widget icon;
 
   const MyCard({
     super.key,
@@ -34,12 +34,12 @@ class MyCard extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                      color: fgColor,
-                      fontSize: 32,
+                    color: fgColor,
+                    fontSize: 32,
                       fontWeight: FontWeight.w600),
-                ),
+                  ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,6 +65,7 @@ class MyCard extends StatelessWidget {
                 ),
               ],
             ),
+            Spacer(),
             icon,
           ],
         ),
