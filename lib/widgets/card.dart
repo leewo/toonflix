@@ -17,6 +17,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
           color: bgColor, borderRadius: BorderRadius.circular(15)),
       child: Padding(
@@ -34,10 +35,10 @@ class MyCard extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    color: fgColor,
-                    fontSize: 32,
+                      color: fgColor,
+                      fontSize: 32,
                       fontWeight: FontWeight.w600),
-                  ),
+                ),
                 SizedBox(
                   height: 5,
                 ),
@@ -66,7 +67,13 @@ class MyCard extends StatelessWidget {
               ],
             ),
             Spacer(),
-            icon,
+            Transform.translate(
+              offset: Offset(20, 30),
+              child: Transform.scale(
+                scale: 2,
+                child: icon,
+              ),
+            ),
           ],
         ),
       ),
