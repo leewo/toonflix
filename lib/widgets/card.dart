@@ -2,24 +2,25 @@ import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
   final String title, number, currency;
-  final Color bgColor, fgColor;
   final Widget icon;
+  final bool invertedColor;
+  final Color bgColor = const Color(0xFF202123);
 
   const MyCard({
     super.key,
     required this.title,
     required this.number,
     required this.currency,
-    required this.bgColor,
-    required this.fgColor,
     required this.icon,
+    required this.invertedColor,
   });
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-          color: bgColor, borderRadius: BorderRadius.circular(15)),
+          color: invertedColor ? Colors.white : bgColor,
+          borderRadius: BorderRadius.circular(15)),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 25,
@@ -35,7 +36,7 @@ class MyCard extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                      color: fgColor,
+                      color: invertedColor ? bgColor : Colors.white,
                       fontSize: 32,
                       fontWeight: FontWeight.w600),
                 ),
@@ -48,7 +49,7 @@ class MyCard extends StatelessWidget {
                     Text(
                       number,
                       style: TextStyle(
-                        color: fgColor,
+                        color: invertedColor ? bgColor : Colors.white,
                         fontSize: 20,
                       ),
                     ),
@@ -58,7 +59,7 @@ class MyCard extends StatelessWidget {
                     Text(
                       currency,
                       style: TextStyle(
-                        color: fgColor.withAlpha(150),
+                        color: invertedColor ? bgColor : Colors.white.withAlpha(150),
                         fontSize: 20,
                       ),
                     ),
@@ -68,7 +69,7 @@ class MyCard extends StatelessWidget {
             ),
             Spacer(),
             Transform.translate(
-              offset: Offset(20, 30),
+              offset: Offset(10, 30),
               child: Transform.scale(
                 scale: 2,
                 child: icon,
