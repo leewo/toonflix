@@ -127,6 +127,7 @@ class MyApp extends StatelessWidget {
                   height: 20,
                 ),
                 MyCard(
+                  index: 0,
                   title: 'Euro',
                   number: '6 428',
                   currency: 'EUR',
@@ -137,6 +138,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 MyCard(
+                  index: 1,
                   title: 'Dollar',
                   number: '4 428',
                   currency: 'USD',
@@ -147,6 +149,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 MyCard(
+                  index: 2,
                   title: 'Won',
                   number: '9 122 001',
                   currency: 'KRW',
@@ -158,6 +161,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 MyCard(
+                  index: 3,
                   title: 'Bitcoin',
                   number: '10 028',
                   currency: 'BTC',
